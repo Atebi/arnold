@@ -51,13 +51,13 @@ const GlobalPage = () => {
               </div>
             </AnimatedDiv>
             <AnimatedDiv variant="fadeInUp" delay={0.8}>
-              <p className="mb-10 font-semibold md:text-lg lg:mb-8 lg:text-xl">
+              <p className="mb-10 font-medium md:text-lg lg:mb-8 lg:text-xl">
                 The bottom-line impact of sourcing for funds globally.
               </p>
             </AnimatedDiv>
 
             <AnimatedDiv variant="fadeInUp" delay={1}>
-              <p className="text-base font-light leading-7">
+              <p className="text-base font-extralight leading-7 lg:text-xl lg:leading-8">
                 In "Global Outsourcing," acclaimed finance author explores the
                 transformative impact of outsourcing on modern businesses.
                 <br />

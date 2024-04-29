@@ -26,7 +26,7 @@ const ContactPage = () => {
               </div>
             </AnimatedDiv>
             {/* social-icons */}
-            <AnimatedDiv variant="fadeInLeft" delay={2}>
+            <AnimatedDiv variant="fadeInLeft" delay={1}>
               <div className="absolute -bottom-10 left-1/2 z-10 flex w-full max-w-44 -translate-x-1/2 justify-center gap-4 rounded bg-white px-3 py-4 shadow-2xl">
                 <Link href="#" className="hover:opacity-65 active:opacity-100">
                   <Image
@@ -76,14 +76,14 @@ const ContactPage = () => {
             </div>
           </AnimatedDiv>
 
-          <AnimatedDiv variant="fadeInUp" delay={0.9}>
+          <AnimatedDiv variant="fadeInUp" delay={0.7}>
             <p className="mb-6 md:text-lg lg:mb-8 lg:text-xl">
               Got something on your mind? Send me a message.
             </p>
           </AnimatedDiv>
 
           {/* FORM */}
-          <AnimatedDiv variant="fadeInUp" delay={2}>
+          <AnimatedDiv variant="fadeInUp" delay={1}>
             <Form />
           </AnimatedDiv>
         </div>

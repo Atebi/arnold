@@ -35,7 +35,7 @@ const BooksPage = () => {
             <h2 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
               Global Sourcing
             </h2>
-            <p className="mb-5 text-base font-light lg:text-lg">
+            <p className="mb-5 lg:h-56 text-base font-light lg:text-lg">
               "An insightful guide that demystifies the outsourcing landscape.
               This book not only highlights the benefits but also addresses the
               potential challenges and how to mitigate them. A valuable resource
@@ -58,7 +58,7 @@ const BooksPage = () => {
             <h2 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
               Future Financiers
             </h2>
-            <p className="mb-5 text-base font-light lg:text-lg">
+            <p className="mb-5 lg:h-56 text-base font-light lg:text-lg">
               "This book is a treasure trove of insights for finance
               professionals. It presents innovative approaches to wealth
               management with clarity and depth, making complex topics

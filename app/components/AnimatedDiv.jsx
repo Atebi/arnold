@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import { animate, motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const AnimatedDiv = ({ children, variant, delay }) => {
   const ref = useRef(null);
-  //   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.5 });
-  const inView = useInView(ref);
+  const inView = useInView(ref, { once: true });
 
   const variants = {
     fadeInLeft: {

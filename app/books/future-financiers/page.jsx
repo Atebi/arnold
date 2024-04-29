@@ -49,14 +49,14 @@ const FFPage = () => {
             </AnimatedDiv>
 
             <AnimatedDiv variant="fadeInUp" delay={0.7}>
-              <p className="mb-10 font-semibold md:text-lg lg:mb-8 lg:text-xl">
+              <p className="mb-10 font-medium md:text-lg lg:mb-8 lg:text-xl">
                 Redefining and Navigating the Future of Wealth Management.
               </p>
             </AnimatedDiv>
 
             <AnimatedDiv variant="fadeInUp" delay={1}>
               {" "}
-              <p className="text-base font-light leading-7">
+              <p className="text-base font-extralight leading-7 lg:text-xl lg:leading-8">
                 "Future Financiers" unveils ground-breaking approaches to wealth
                 management tailored for the digital age. This forward-thinking
                 guide equips readers with cutting-edge tools and methodologies

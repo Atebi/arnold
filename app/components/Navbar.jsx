@@ -1,11 +1,10 @@
 "use client";
 
-// The Menu(display:fixed) for this Navbar is full height and full width(Display:fixed) and slides in from right to left(can be customized of course). It's icon is hamburger and X.
-
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import React, { useRef, useEffect, useState } from "react";
+import AnimatedDiv from "./AnimatedDiv";
 
 const Navbar = () => {
   const currentPath = usePathname();
@@ -32,28 +31,6 @@ const Navbar = () => {
     };
   }, [prevScrollPos]);
 
-  // I use this useEffect hook to listen for a click outside the nav modal so that I can remove focus from it.
-  // useEffect(() => {
-  //   const handleOutsideClick = (event) => {
-  //     if (
-  //       !navRef.current?.contains(event.target) &&
-  //       !btnRef.current?.contains(event.target) &&
-  //       !menuRef.current?.contains(event.target)
-  //     ) {
-  //       // alert("outside clicked");
-  //       setIsOpen(false);
-
-  //       // console.log("outside clicked");
-  //     }
-  //   };
-
-  //   window.addEventListener("mousedown", handleOutsideClick);
-
-  //   return () => {
-  //     window.removeEventListener("mousedown", handleOutsideClick);
-  //   };
-  // }, [menuRef]);
-
   //Handle open and closing of our nav at sm: and maybe md:
   const handleClick = () => {
     // document.body.classList.toggle("overflow-hidden");
@@ -66,14 +43,6 @@ const Navbar = () => {
 
     setIsOpen(!isOpen);
   };
-
-  // // User clicks on a nav link
-  // const handleLink = (e) => {
-  //   e.preventDefault();
-  //   const href = e.target.href;
-  //   router.push(href);
-  //   setIsFocused(false);
-  // };
 
   // User clicks on a NAV link
   const handleLink = (e) => {
@@ -123,15 +92,16 @@ const Navbar = () => {
                     transition-all duration-300 ease-out ${isOpen ? "animate-spin-fast-stop -translate-y-1 -rotate-45" : "translate-y-0.5"}`}
           ></span>
         </button>
+
         <div
           onClick={handleClick}
-          className={`${isOpen ? "animate-slide-in-from-right fixed left-0 right-0 top-16 z-30 block h-screen bg-gray-500/75" : "hidden"} w-full uppercase md:static md:block md:h-auto md:w-auto md:animate-none md:bg-transparent`}
+          className={`${isOpen ? "fixed left-0 right-0 top-[59px] z-30 block h-screen bg-gray-500/75" : "hidden"} w-full uppercase md:static md:block md:h-auto md:w-auto  md:bg-transparent`}
           id="navbar-default"
         >
           <ul
             ref={menuRef}
             onClick={(e) => e.stopPropagation()}
-            className={`mt-4 ${isOpen ? "ml-auto h-full w-[80vw]" : ""} flex flex-col gap-2 rounded-lg border border-gray-100 bg-gray-50 p-4 font-semibold md:mt-0 md:w-auto md:flex-row md:gap-0 md:space-x-4 md:border-0 md:bg-white md:p-0 md:font-medium rtl:space-x-reverse`}
+            className={`${isOpen ? "animate-slideInRight ml-auto h-full w-[80vw]" : ""} flex flex-col gap-2 border border-gray-100 bg-gray-100 p-4 font-semibold md:mt-0 md:w-auto md:animate-none md:flex-row md:gap-0 md:space-x-4 md:border-0 md:bg-white md:p-0 md:font-medium rtl:space-x-reverse`}
           >
             <li>
               <Link

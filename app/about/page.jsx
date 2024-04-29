@@ -31,7 +31,7 @@ const AboutPage = () => {
               </div>
             </AnimatedDiv>
             {/* social-icons */}
-            <AnimatedDiv variant="fadeInLeft" delay={2}>
+            <AnimatedDiv variant="fadeInLeft" delay={1}>
               <div className="absolute -bottom-10 left-1/2 z-10 flex w-full max-w-44 -translate-x-1/2 justify-center gap-4 rounded bg-white px-3 py-4 shadow-2xl">
                 <Link href="#" className="hover:opacity-65 active:opacity-100">
                   <Image
@@ -73,14 +73,14 @@ const AboutPage = () => {
 
         {/* txt */}
         <div className="mt-16 overflow-hidden md:col-span-8 md:mt-8">
-          <AnimatedDiv variant="fadeInRight" delay={1}>
+          <AnimatedDiv variant="fadeInRight" delay={0.6}>
             <div className="mb-10 w-fit border-b-4 border-primary pb-6">
               <h1 className=" text-4xl font-extrabold leading-none tracking-tight  md:text-5xl xl:text-6xl">
                 ABOUT ARNOLD <br /> PECKHAM
               </h1>
             </div>
           </AnimatedDiv>
-          <AnimatedDiv variant="fadeInUp" delay={2}>
+          <AnimatedDiv variant="fadeInUp" delay={1}>
             <p className="text-base font-light leading-7">
               Arnold Peckham is a seasoned finance expert known for his
               insightful perspectives on modern business practices. Residing in
