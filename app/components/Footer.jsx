@@ -77,7 +77,7 @@ const Footer = () => {
           <li>
             <Link
               href="/"
-              className={`${currentPath === "/" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+              className={`${currentPath === "/" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
               // aria-current="page"
             >
               Home
@@ -86,7 +86,7 @@ const Footer = () => {
           <li>
             <Link
               href="/books"
-              className={`${currentPath === "/books" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+              className={`${currentPath === "/books" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
             >
               Books
             </Link>
@@ -94,7 +94,7 @@ const Footer = () => {
           <li>
             <Link
               href="/about"
-              className={`${currentPath === "/about" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+              className={`${currentPath === "/about" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
             >
               About
             </Link>
@@ -102,7 +102,7 @@ const Footer = () => {
           <li>
             <Link
               href="contact"
-              className={`${currentPath === "/contact" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+              className={`${currentPath === "/contact" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
             >
               Contact
             </Link>

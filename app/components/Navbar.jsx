@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import React, { useRef, useEffect, useState } from "react";
-import AnimatedDiv from "./AnimatedDiv";
 
 const Navbar = () => {
   const currentPath = usePathname();
@@ -101,13 +100,13 @@ const Navbar = () => {
           <ul
             ref={menuRef}
             onClick={(e) => e.stopPropagation()}
-            className={`${isOpen ? "animate-slideInRight ml-auto h-full w-[80vw]" : ""} flex flex-col gap-2 border border-gray-100 bg-gray-100 p-4 font-semibold md:mt-0 md:w-auto md:animate-none md:flex-row md:gap-0 md:space-x-4 md:border-0 md:bg-white md:p-0 md:font-medium rtl:space-x-reverse`}
+            className={`${isOpen ? "ml-auto h-full w-[80vw] animate-slideInRight" : ""} flex flex-col gap-2 border border-gray-100 bg-gray-100 p-4 font-semibold md:mt-0 md:w-auto md:animate-none md:flex-row md:gap-0 md:space-x-4 md:border-0 md:bg-white md:p-0 md:font-medium rtl:space-x-reverse`}
           >
             <li>
               <Link
                 href="/"
                 onClick={handleLink}
-                className={`${currentPath === "/" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+                className={`${currentPath === "/" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
                 // aria-current="page"
               >
                 Home
@@ -117,7 +116,7 @@ const Navbar = () => {
               <Link
                 href="/books"
                 onClick={handleLink}
-                className={`${currentPath === "/books" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+                className={`${currentPath === "/books" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
               >
                 Books
               </Link>
@@ -126,7 +125,7 @@ const Navbar = () => {
               <Link
                 href="/about"
                 onClick={handleLink}
-                className={`${currentPath === "/about" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+                className={`${currentPath === "/about" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
               >
                 About
               </Link>
@@ -135,7 +134,7 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 onClick={handleLink}
-                className={`${currentPath === "/contact" ? "text-primary" : "hover:text-primary hover:opacity-60 active:opacity-100"} block rounded px-3 py-2`}
+                className={`${currentPath === "/contact" ? "text-primary" : "hover:text-primary hover:underline hover:decoration-primary/65 hover:decoration-4 hover:underline-offset-[12px] hover:opacity-60 active:opacity-100 "} block rounded px-3 py-2`}
               >
                 Contact
               </Link>
