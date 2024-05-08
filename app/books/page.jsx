@@ -7,7 +7,7 @@ import AnimatedDiv from "../components/AnimatedDiv";
 const BooksPage = () => {
   return (
     <section className="container_pad mx-auto mt-[60px] max-w-screen-2xl pt-14 text-center text-darkBlue md:mt-[72px] md:pt-16 xl:pt-24">
-      <AnimatedDiv variant="fadeInUp" delay={0.2}>
+      <AnimatedDiv variant="fadeInUp">
         <h3 className="mb-3 text-lg font-semibold text-primary lg:mb-4 lg:text-2xl">
           FINANCE AND INNOVATION
         </h3>
@@ -20,9 +20,9 @@ const BooksPage = () => {
       </AnimatedDiv>
 
       {/* books */}
-      <AnimatedDiv variant="fadeInUp" delay={1}>
-        <div className="mx-auto mt-14 flex max-w-screen-md flex-col items-center justify-center gap-16 md:mt-16 md:flex-row md:gap-10 lg:mt-20">
-          {/* book-1 */}
+      <div className="mx-auto mt-14 flex max-w-screen-md flex-col items-center justify-center gap-16 md:mt-16 md:flex-row md:gap-10 lg:mt-20">
+        {/* book-1 */}
+        <AnimatedDiv variant="fadeInUp" delay={0.4}>
           <div className="max-w-[240px] md:max-w-sm">
             <Image
               src="/globalbook.webp"
@@ -35,7 +35,7 @@ const BooksPage = () => {
             <h2 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
               Global Sourcing
             </h2>
-            <p className="mb-5 lg:h-56 text-base font-light lg:text-lg">
+            <p className="mb-5 text-base font-light md:h-48 lg:h-56 lg:text-lg">
               "An insightful guide that demystifies the outsourcing landscape.
               This book not only highlights the benefits but also addresses the
               potential challenges and how to mitigate them. A valuable resource
@@ -45,7 +45,10 @@ const BooksPage = () => {
               <Button />
             </Link>
           </div>
-          {/* book-2 */}
+        </AnimatedDiv>
+
+        {/* book-2 */}
+        <AnimatedDiv variant="fadeInUp" delay={0.4}>
           <div className="max-w-[240px] md:max-w-sm">
             <Image
               src="/ffbook.webp"
@@ -58,7 +61,7 @@ const BooksPage = () => {
             <h2 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
               Future Financiers
             </h2>
-            <p className="mb-5 lg:h-56 text-base font-light lg:text-lg">
+            <p className="mb-5 text-base font-light md:h-48 lg:h-56 lg:text-lg">
               "This book is a treasure trove of insights for finance
               professionals. It presents innovative approaches to wealth
               management with clarity and depth, making complex topics
@@ -69,8 +72,8 @@ const BooksPage = () => {
               <Button />
             </Link>
           </div>
-        </div>
-      </AnimatedDiv>
+        </AnimatedDiv>
+      </div>
     </section>
   );
 };

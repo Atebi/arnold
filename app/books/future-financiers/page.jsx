@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/app/components/Button";
 import FFReview from "@/app/components/FFReview";
 import AnimatedDiv from "@/app/components/AnimatedDiv";
@@ -27,7 +28,7 @@ const FFPage = () => {
               </AnimatedDiv>
 
               {/* product links */}
-              <AnimatedDiv variant="fadeInUp" delay={1}>
+              <AnimatedDiv variant="fadeInUp" delay={0.4}>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Button text="APPLE BOOKS" />
                   <Button text="AUDIBLE" />
@@ -116,6 +117,44 @@ const FFPage = () => {
         </AnimatedDiv>
       </section>
       {/* BUY Section end */}
+
+      {/* OTHER BOOKS SECTION */}
+      <section className="container_pad mt-28 text-center text-darkBlue md:mt-36 lg:mt-36 xl:mt-44">
+        <AnimatedDiv variant="fadeInUp">
+          <h2 className="text-3xl font-bold underline decoration-primary underline-offset-[40px] md:text-4xl xl:text-5xl">
+            OTHER BOOKS
+          </h2>{" "}
+          <div className="mt-24 lg:mt-28">
+            {/* book-1 */}
+            <AnimatedDiv variant="fadeInUp" delay={0.4}>
+              <div className="mx-auto max-w-[240px] md:max-w-sm">
+                <Image
+                  src="/globalbook.webp"
+                  alt="Global Sourcing book image"
+                  width={0}
+                  height={0}
+                  sizes="100vw (max-width: 896px) 45vw"
+                  className="mx-auto h-auto w-full max-w-[200px]"
+                />
+
+                <h2 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
+                  Global Sourcing
+                </h2>
+                <p className="mb-5 text-base font-light lg:text-lg">
+                  "An insightful guide that demystifies the outsourcing
+                  landscape. This book not only highlights the benefits but also
+                  addresses the potential challenges and how to mitigate them. A
+                  valuable resource for entrepreneurs and managers alike."
+                </p>
+                <Link href="/books/global-sourcing">
+                  <Button />
+                </Link>
+              </div>
+            </AnimatedDiv>
+          </div>
+        </AnimatedDiv>
+      </section>
+      {/* OTHERS Section end */}
     </div>
   );
 };

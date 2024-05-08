@@ -51,7 +51,7 @@ export default function Home() {
 
       {/* BOOKS Section */}
       <section className="container_pad mt-20 text-center text-darkBlue lg:mt-36">
-        <AnimatedDiv variant="fadeInUp" delay={0.2}>
+        <AnimatedDiv variant="fadeInUp">
           <h3 className="mb-3 text-lg font-semibold text-primary lg:mb-4 lg:text-2xl">
             FINANCE AND INNOVATION
           </h3>
@@ -61,9 +61,9 @@ export default function Home() {
         </AnimatedDiv>
 
         {/* books */}
-        <AnimatedDiv variant="fadeInUp" delay={0.6}>
-          <div className="mx-auto mt-24 flex max-w-screen-md flex-col items-center justify-center gap-16 md:flex-row md:gap-10 lg:mt-32">
-            {/* book-1 */}
+        <div className="mx-auto mt-24 flex max-w-screen-md flex-col items-center justify-center gap-16 md:flex-row md:gap-10 lg:mt-32">
+          {/* book-1 */}
+          <AnimatedDiv variant="fadeInUp" delay={0.4}>
             <div className="max-w-[240px] md:max-w-sm">
               <Image
                 src="/globalbook.webp"
@@ -76,7 +76,7 @@ export default function Home() {
               <h4 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
                 Global Sourcing
               </h4>
-              <p className="mb-5 text-base font-light lg:h-56 lg:text-lg">
+              <p className="mb-5 text-base font-light md:h-48 lg:h-56 lg:text-lg">
                 "An insightful guide that demystifies the outsourcing landscape.
                 This book not only highlights the benefits but also addresses
                 the potential challenges and how to mitigate them. A valuable
@@ -86,7 +86,10 @@ export default function Home() {
                 <Button />
               </Link>
             </div>
-            {/* book-2 */}
+          </AnimatedDiv>
+
+          {/* book-2 */}
+          <AnimatedDiv variant="fadeInUp" delay={0.4}>
             <div className="max-w-[240px] md:max-w-sm">
               <Image
                 src="/ffbook.webp"
@@ -99,7 +102,7 @@ export default function Home() {
               <h4 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
                 Future Financiers
               </h4>
-              <p className="mb-5 text-base font-light lg:h-56 lg:text-lg">
+              <p className="mb-5 text-base font-light md:h-48 lg:h-56 lg:text-lg">
                 "This book is a treasure trove of insights for finance
                 professionals. It presents innovative approaches to wealth
                 management with clarity and depth, making complex topics
@@ -110,8 +113,8 @@ export default function Home() {
                 <Button />
               </Link>
             </div>
-          </div>
-        </AnimatedDiv>
+          </AnimatedDiv>
+        </div>
       </section>
       {/* BOOKS Section end */}
 
@@ -191,25 +194,32 @@ export default function Home() {
           </div>
 
           {/* txt */}
-          <div className="overflow-hidden md:col-span-8">
-            <AnimatedDiv variant="fadeInRight" delay={1}>
-              <h4 className="mb-6 mt-8 text-2xl font-medium lg:mt-12">
-                Finance and Innovation Writer
-              </h4>
-              <p className="mb-5 text-base font-light leading-7">
-                Arnold Peckham is a distinguished finance author and innovator
-                based in the United States. With a keen interest in global
-                outsourcing and innovative financial strategies, Arnold's work
-                has empowered businesses and investors to navigate complex
-                financial landscapes with confidence.
-                <br />
-                <br /> Explore Arnold's books and discover how you can redefine
-                efficiency and success in the world of finance. Join Arnold on
-                his mission to revolutionize finance through innovation and
-                strategic thinking. Dive into his books, attend his workshops,
-                and embark on a journey towards financial empowerment and growth
-                with Arnold Peckham.
-              </p>
+          <div className="md:col-span-8">
+            <div className="overflow-x-hidden">
+              <AnimatedDiv variant="fadeInRight" delay={1}>
+                <h4 className="mb-6 mt-8 text-2xl font-medium lg:mt-12">
+                  Finance and Innovation Writer
+                </h4>
+                <p className="mb-6 text-base font-light leading-7">
+                  Arnold Peckham is a distinguished finance author and innovator
+                  based in the United States. With a keen interest in global
+                  outsourcing and innovative financial strategies, Arnold's work
+                  has empowered businesses and investors to navigate complex
+                  financial landscapes with confidence.
+                  <br />
+                  <br /> Explore Arnold's books and discover how you can
+                  redefine efficiency and success in the world of finance. Join
+                  Arnold on his mission to revolutionize finance through
+                  innovation and strategic thinking. Dive into his books, attend
+                  his workshops, and embark on a journey towards financial
+                  empowerment and growth with Arnold Peckham.
+                </p>
+                {/* <Link href="/about">
+                <Button />
+              </Link> */}
+              </AnimatedDiv>
+            </div>
+            <AnimatedDiv variant="fadeInUp" delay={0.2}>
               <Link href="/about">
                 <Button />
               </Link>
